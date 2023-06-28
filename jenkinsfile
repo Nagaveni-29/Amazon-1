@@ -8,6 +8,7 @@ tools {
  stages {
   stage('clone') {
     steps {
+      echo 'clone'
    checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'ssh key', url: 'https://github.com/Nagaveni-29/Amazon-1.git']])
     }
   }
