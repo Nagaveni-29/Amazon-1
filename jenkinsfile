@@ -18,10 +18,10 @@ tools {
         sh 'mvn clean install' 
     }
   }
-    post {
-      always {
-        archiveArtifacts artifacts: 'Amazon-Core/target/**.jar', followSymlinks: false
-        junit 'Amazon-Core/target/surefire-reports/*.*xml'
+    stage('post') {
+       steps {
+          archiveArtifacts artifacts: 'Amazon-Core/target/**.jar', followSymlinks: false
+          junit 'Amazon-Core/target/surefire-reports/*.*xml'
       }
     }
  stage('run') {
