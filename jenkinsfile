@@ -24,7 +24,7 @@ tools {
     }
  stage('run') {
     steps {
-    sh 'cp /Amazon-Web/target/*.war /opt/aptomcat/webapps/'
+    sh 'cp /opt/aptomcat/Amazon/Amazon-Core/target/*.war /opt/aptomcat/webapps/'
     sh '/opt/aptomcat/bin/startup.sh'
         }
   }
